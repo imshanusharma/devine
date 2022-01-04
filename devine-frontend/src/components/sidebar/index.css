@@ -12,25 +12,30 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(187, 184, 184);
+    background-color: rgb(255, 255, 255);
 }
 
 .sidebarWrapper {
     padding: 20px;
 }
 .sidebarList {
-    padding: 0;
     margin: 0;
     list-style: none;
+    background-color: rgba(128, 255, 0, 0.103);
+    border-radius: 10px;
+    border: 2px solid grey;
+    padding: 10px 7px;
+    padding-left: 10px;
 }
 .sidebarListItem {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 .sidebarIcon {
     margin-right: 15px;
@@ -39,7 +44,10 @@
     margin: 20px 0px;
 }
 .sidebarFriendList {
-    padding: 0;
+    padding: 10px 10px;
     margin: 0;
     list-style: none;
+    background-color: #c20ab936;
+    border-radius: 10px;
+    border: 2px solid grey;
 }

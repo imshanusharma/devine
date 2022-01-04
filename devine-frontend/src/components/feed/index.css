@@ -1,4 +1,9 @@
 .feed {
     flex: 9;
-    background-color: #f1f1f1;
+    background-color: white;
+}
+.feedPostHeading {
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 30px;
 }

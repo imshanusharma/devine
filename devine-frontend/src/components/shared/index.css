@@ -6,6 +6,8 @@
     margin-left: 10px;
     margin-top: 20px;
     margin-right: 10px;
+    background-color: #ff7ea52d;
+    border: 2px solid grey;
 }
 
 .shareWrapper {
@@ -28,7 +30,7 @@
 .shareInput {
     border: none;
     width: 80%;
-    background-color: #f1f1f1;
+    background-color: #ff7ea500;
 }
 
 .shareInput:focus {
@@ -59,13 +61,14 @@
 
 .shareIcon {
     font-size: 18px;
-    margin-right: 3px;
+    margin-right: 5px;
+    margin-bottom: 3px;
 }
 
 .shareOptionText {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .shareButton {

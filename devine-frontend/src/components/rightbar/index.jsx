@@ -8,15 +8,8 @@ export const RightBar = ({ profile }) => {
     const HomeRightbar = () => {
         return (
             <div>
-                {/* <div className="birthdayContainer">
-                    <img src={gift} alt="" className="birthdayImg" />
-                    <span className="birthdayText">
-                        <b>Shanu Sharma</b> and <b>3 other friends</b> have a
-                        birthday today
-                    </span>
-                </div> */}
                 <img src={ad} alt="" className="rightbarAd" />
-                <h4 className="rightbarTitle">Online Friends</h4>
+                <h4 className="rightbarTitle">Online People</h4>
                 <ul className="rightbarFriendList">
                     {Users.map((u) => (
                         <Online key={u.id} user={u} />
@@ -33,15 +26,15 @@ export const RightBar = ({ profile }) => {
                 <div className="rightbarInfo">
                     <div className="rightbarInfoItem">
                         <span className="rightbarInfoKey">City : </span>
-                        <span className="rightbarInfoValue">New York</span>
+                        <span className="rightbarInfoValue">Kaithal</span>
                     </div>
                     <div className="rightbarInfoItem">
                         <span className="rightbarInfoKey">From : </span>
-                        <span className="rightbarInfoValue">Madrid</span>
+                        <span className="rightbarInfoValue">Kaithal</span>
                     </div>
                     <div className="rightbarInfoItem">
-                        <span className="rightbarInfoKey">Relationship : </span>
-                        <span className="rightbarInfoValue">Single</span>
+                        <span className="rightbarInfoKey">Profession : </span>
+                        <span className="rightbarInfoValue">SDE</span>
                     </div>
                 </div>
                 <h4 className="rightbarTitle">User Friends</h4>

@@ -8,7 +8,7 @@ export const Feed = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             const res = await axios.get(
-                'http://localhost:8800/api/posts/timeline/619269a76d0e8e32f35928b7'
+                'http://localhost:8800/api/posts/timeline/61d44d3fbf8681ba37d3c11b'
             );
             setPosts(res.data);
         };
@@ -18,6 +18,7 @@ export const Feed = () => {
         <div className="feed">
             <div className="feedWrapper">
                 <Share />
+                <h2 className="feedPostHeading">Posts</h2>
                 {posts.map((p) => (
                     <Post key={p._id} post={p} />
                 ))}

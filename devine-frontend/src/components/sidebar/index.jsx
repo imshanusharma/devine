@@ -57,6 +57,7 @@ export const SideBar = () => {
                         <span className="sidebarListItemText">Courses</span>
                     </li>
                 </ul>
+                <br></br>
                 <button className="btn btn-common">Show More</button>
                 <hr className="sidebarHr"></hr>
                 <ul className="sidebarFriendList">

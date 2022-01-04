@@ -1,10 +1,10 @@
 import './index.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import likee from '../../assets/like.png';
 import love from '../../assets/heart.png';
 import noAvatar from '../../assets/People/noAvatar.png';
 import { MoreVert } from '@material-ui/icons';
+
 import axios from 'axios';
 import { format } from 'timeago.js';
 
@@ -56,14 +56,11 @@ const Post = ({ post }) => {
                     <div className="postBottomLeft">
                         <img
                             className="likeIcon"
-                            src={likee}
+                            src={love}
                             alt=""
                             onClick={likeHandler}
                         />
-                        <img className="likeIcon" src={love} alt="img" />
-                        <span className="postLikeCounter">
-                            {like} people liked it
-                        </span>
+                        <span className="postLikeCounter">{like} likes</span>
                     </div>
                     <div className="postBottomRight">
                         <span className="postCommentText">

@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
-import { PermMedia, Label, Room, EmojiEmotions } from '@material-ui/icons';
-import profileimg from '../../assets/People/1.jpeg';
+import { Room, Announcement, AddAPhoto } from '@material-ui/icons';
+import noAvatar from '../../assets/People/noAvatar.png';
 
 const Share = () => {
     return (
@@ -10,7 +10,7 @@ const Share = () => {
                 <div className="shareTop">
                     <img
                         className="shareProfileImg"
-                        src={profileimg}
+                        src={noAvatar}
                         alt="img"
                     ></img>
                     <input
@@ -22,28 +22,28 @@ const Share = () => {
                 <div className="shareBottom">
                     <div className="shareOptions">
                         <div className="shareOption">
-                            <PermMedia
+                            <AddAPhoto
                                 htmlColor="tomato"
                                 className="shareIcon"
                             />
                             <span className="shareOptionText">
-                                Photo or Video
+                                Upload Photo
                             </span>
                         </div>
                         <div className="shareOption">
-                            <Label htmlColor="green" className="shareIcon" />
-                            <span className="shareOptionText">Tag</span>
-                        </div>
-                        <div className="shareOption">
                             <Room htmlColor="blue" className="shareIcon" />
-                            <span className="shareOptionText">Locations</span>
+                            <span className="shareOptionText">
+                                Share Location
+                            </span>
                         </div>
                         <div className="shareOption">
-                            <EmojiEmotions
+                            <Announcement
                                 htmlColor="goldenrod"
                                 className="shareIcon"
                             />
-                            <span className="shareOptionText">Moods</span>
+                            <span className="shareOptionText">
+                                Announcement
+                            </span>
                         </div>
                     </div>
                     <button className="shareButton">Share</button>
