@@ -1,10 +1,10 @@
 import React from 'react';
 import './index.css';
-import gift from '../../assets/gift.png';
+import noAvatar from '../../assets/People/noAvatar.png';
 import ad from '../../assets/ad.png';
 import { Users } from '../../dummyData';
 import { Online } from '../../components/online';
-export const RightBar = ({ profile }) => {
+export const RightBar = ({ user }) => {
     const HomeRightbar = () => {
         return (
             <div>
@@ -22,82 +22,72 @@ export const RightBar = ({ profile }) => {
     const ProfileRightbar = () => {
         return (
             <div>
-                <h4 className="rightbarTitle">User Information</h4>
                 <div className="rightbarInfo">
+                    <h4 className="rightbarTitle">User Information</h4>
                     <div className="rightbarInfoItem">
                         <span className="rightbarInfoKey">City : </span>
-                        <span className="rightbarInfoValue">Kaithal</span>
+                        <span className="rightbarInfoValue">{user.city}</span>
                     </div>
                     <div className="rightbarInfoItem">
                         <span className="rightbarInfoKey">From : </span>
-                        <span className="rightbarInfoValue">Kaithal</span>
+                        <span className="rightbarInfoValue">{user.from}</span>
                     </div>
                     <div className="rightbarInfoItem">
                         <span className="rightbarInfoKey">Profession : </span>
-                        <span className="rightbarInfoValue">SDE</span>
+                        <span className="rightbarInfoValue">
+                            {user.profession}
+                        </span>
                     </div>
                 </div>
                 <h4 className="rightbarTitle">User Friends</h4>
                 <div className="rightbarFollowings">
                     <div className="rightbarFollowing">
                         <img
-                            src={gift}
+                            src={noAvatar}
                             alt=""
                             className="rightbarFollowingImg"
                         />
-                        <span className="rightbarFollowingName">
-                            John Carter
-                        </span>
+                        <span className="rightbarFollowingName">Shanu</span>
                     </div>
                     <div className="rightbarFollowing">
                         <img
-                            src={gift}
+                            src={noAvatar}
                             alt=""
                             className="rightbarFollowingImg"
                         />
-                        <span className="rightbarFollowingName">
-                            John Carter
-                        </span>
+                        <span className="rightbarFollowingName">Shanu</span>
                     </div>
                     <div className="rightbarFollowing">
                         <img
-                            src={gift}
+                            src={noAvatar}
                             alt=""
                             className="rightbarFollowingImg"
                         />
-                        <span className="rightbarFollowingName">
-                            John Carter
-                        </span>
+                        <span className="rightbarFollowingName">Shanu</span>
                     </div>
                     <div className="rightbarFollowing">
                         <img
-                            src={gift}
+                            src={noAvatar}
                             alt=""
                             className="rightbarFollowingImg"
                         />
-                        <span className="rightbarFollowingName">
-                            John Carter
-                        </span>
+                        <span className="rightbarFollowingName">Shanu</span>
                     </div>
                     <div className="rightbarFollowing">
                         <img
-                            src={gift}
+                            src={noAvatar}
                             alt=""
                             className="rightbarFollowingImg"
                         />
-                        <span className="rightbarFollowingName">
-                            John Carter
-                        </span>
+                        <span className="rightbarFollowingName">Shanu</span>
                     </div>
                     <div className="rightbarFollowing">
                         <img
-                            src={gift}
+                            src={noAvatar}
                             alt=""
                             className="rightbarFollowingImg"
                         />
-                        <span className="rightbarFollowingName">
-                            John Carter
-                        </span>
+                        <span className="rightbarFollowingName">Shanu</span>
                     </div>
                 </div>
             </div>
@@ -106,7 +96,7 @@ export const RightBar = ({ profile }) => {
     return (
         <div className="rightbar">
             <div className="rightbarWrapper">
-                {profile ? <ProfileRightbar /> : <HomeRightbar />}
+                {user ? <ProfileRightbar /> : <HomeRightbar />}
             </div>
         </div>
     );

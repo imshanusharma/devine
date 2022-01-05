@@ -26,8 +26,9 @@
 }
 .btn.btn-common {
     background-color: #8bdeec;
-    color: white;
+    color: black;
     border-radius: 5px;
+    width: 245px;
 }
 .btn.btn-common:hover {
     background-color: #62b3c2;

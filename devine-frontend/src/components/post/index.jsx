@@ -16,7 +16,7 @@ const Post = ({ post }) => {
     useEffect(() => {
         const fetchUser = async () => {
             const res = await axios.get(
-                `http://localhost:8800/api/users/${post.userId}`
+                `http://localhost:8800/api/users?userId=${post.userId}`
             );
             setUser(res.data);
         };

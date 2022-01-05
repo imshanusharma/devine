@@ -14,7 +14,7 @@ const Share = () => {
                         alt="img"
                     ></img>
                     <input
-                        placeholder="What's in your mind Shanu?"
+                        placeholder="What to share something?"
                         className="shareInput"
                     />
                 </div>

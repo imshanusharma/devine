@@ -55,6 +55,10 @@
 .rightbarInfo {
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: #1873f231;
 }
 
 .rightbarInfoItem {
