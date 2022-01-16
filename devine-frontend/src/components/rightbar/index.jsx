@@ -1,14 +1,13 @@
 import React from 'react';
 import './index.css';
-import noAvatar from '../../assets/People/noAvatar.png';
-import ad from '../../assets/ad.png';
 import { Users } from '../../dummyData';
 import { Online } from '../../components/online';
 export const RightBar = ({ user }) => {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const HomeRightbar = () => {
         return (
             <div>
-                <img src={ad} alt="" className="rightbarAd" />
+                <img src={PF + 'ad.png'} alt="" className="rightbarAd" />
                 <h4 className="rightbarTitle">Online People</h4>
                 <ul className="rightbarFriendList">
                     {Users.map((u) => (
@@ -43,7 +42,7 @@ export const RightBar = ({ user }) => {
                 <div className="rightbarFollowings">
                     <div className="rightbarFollowing">
                         <img
-                            src={noAvatar}
+                            src={PF + '/person/noAvatar.png'}
                             alt=""
                             className="rightbarFollowingImg"
                         />
@@ -51,7 +50,7 @@ export const RightBar = ({ user }) => {
                     </div>
                     <div className="rightbarFollowing">
                         <img
-                            src={noAvatar}
+                            src={PF + '/person/noAvatar.png'}
                             alt=""
                             className="rightbarFollowingImg"
                         />
@@ -59,7 +58,7 @@ export const RightBar = ({ user }) => {
                     </div>
                     <div className="rightbarFollowing">
                         <img
-                            src={noAvatar}
+                            src={PF + '/person/noAvatar.png'}
                             alt=""
                             className="rightbarFollowingImg"
                         />
@@ -67,7 +66,7 @@ export const RightBar = ({ user }) => {
                     </div>
                     <div className="rightbarFollowing">
                         <img
-                            src={noAvatar}
+                            src={PF + '/person/noAvatar.png'}
                             alt=""
                             className="rightbarFollowingImg"
                         />
@@ -75,7 +74,7 @@ export const RightBar = ({ user }) => {
                     </div>
                     <div className="rightbarFollowing">
                         <img
-                            src={noAvatar}
+                            src={PF + '/person/noAvatar.png'}
                             alt=""
                             className="rightbarFollowingImg"
                         />
@@ -83,7 +82,7 @@ export const RightBar = ({ user }) => {
                     </div>
                     <div className="rightbarFollowing">
                         <img
-                            src={noAvatar}
+                            src={PF + '/person/noAvatar.png'}
                             alt=""
                             className="rightbarFollowingImg"
                         />

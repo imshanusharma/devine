@@ -5,12 +5,11 @@ import { RightBar } from '../../components/rightbar';
 import { LoginHeader } from '../../components/header';
 import { Feed } from '../../components/feed';
 import { useEffect, useState } from 'react';
-import noCover from '../../assets/People/noCover.png';
-import noAvatar from '../../assets/People/noAvatar.png';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 export const Profile = () => {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const [user, setUser] = useState({});
     const username = useParams().username;
 
@@ -32,12 +31,20 @@ export const Profile = () => {
                     <div className="profileRightTop">
                         <div className="profileCover">
                             <img
-                                src={user.coverImg || noCover}
+                                src={
+                                    user.coverPicture
+                                        ? PF + user.coverPicture
+                                        : PF + 'person/noCover.png'
+                                }
                                 alt=""
                                 className="profileCoverImg"
                             />
                             <img
-                                src={user.profilePicture || noAvatar}
+                                src={
+                                    user.profilePicture
+                                        ? PF + user.profilePicture
+                                        : PF + 'person/noAvatar.png'
+                                }
                                 alt=""
                                 className="profileUserImg"
                             />

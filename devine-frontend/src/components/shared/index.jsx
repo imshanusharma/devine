@@ -1,27 +1,49 @@
 import React from 'react';
 import './index.css';
 import { Room, Announcement, AddAPhoto } from '@material-ui/icons';
-import noAvatar from '../../assets/People/noAvatar.png';
+import { useState } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+import { useContext } from 'react';
+import { useRef } from 'react';
+import axios from 'axios';
 
 const Share = () => {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    const { user } = useContext(AuthContext);
+    const desc = useRef();
+    const [file, setFile] = useState(null);
+    const submitHandler = async (e) => {
+        e.preventDefault();
+        const newPost = {
+            userId: user._id,
+            desc: desc.current.value,
+        };
+        try {
+            await axios.post('http://localhost:8800/api/posts', newPost);
+            window.location.reload();
+        } catch (err) {
+            console.log(err);
+        }
+    };
     return (
         <div className="share">
             <div className="shareWrapper">
                 <div className="shareTop">
                     <img
                         className="shareProfileImg"
-                        src={noAvatar}
+                        src={PF + 'person/noAvatar.png'}
                         alt="img"
                     ></img>
                     <input
-                        placeholder="What to share something?"
+                        placeholder="Want to share something?"
                         className="shareInput"
+                        ref={desc}
                     />
                 </div>
                 <hr className="shareHr" />
-                <div className="shareBottom">
+                <form className="shareBottom" onSubmit={submitHandler}>
                     <div className="shareOptions">
-                        <div className="shareOption">
+                        <label htmlFor="file" className="shareOption">
                             <AddAPhoto
                                 htmlColor="tomato"
                                 className="shareIcon"
@@ -29,7 +51,14 @@ const Share = () => {
                             <span className="shareOptionText">
                                 Upload Photo
                             </span>
-                        </div>
+                            <input
+                                style={{ display: 'none' }}
+                                type="file"
+                                id="file"
+                                accept=".jpeg, .jpg, .png"
+                                onChange={(e) => setFile(e.target.files[0])}
+                            ></input>
+                        </label>
                         <div className="shareOption">
                             <Room htmlColor="blue" className="shareIcon" />
                             <span className="shareOptionText">
@@ -46,8 +75,10 @@ const Share = () => {
                             </span>
                         </div>
                     </div>
-                    <button className="shareButton">Share</button>
-                </div>
+                    <button type="submit" className="shareButton">
+                        Share
+                    </button>
+                </form>
             </div>
         </div>
     );

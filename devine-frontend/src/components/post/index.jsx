@@ -1,14 +1,13 @@
 import './index.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import love from '../../assets/heart.png';
-import noAvatar from '../../assets/People/noAvatar.png';
 import { MoreVert } from '@material-ui/icons';
 
 import axios from 'axios';
 import { format } from 'timeago.js';
 
 const Post = ({ post }) => {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const [like, setLike] = useState(post.likes.length);
     const [isLiked, setIsLiked] = useState(false);
     const [user, setUser] = useState({});
@@ -35,7 +34,11 @@ const Post = ({ post }) => {
                         <Link to={`/profile/${user.username}`}>
                             <img
                                 className="postProfileImg"
-                                src={user.profilePicture || noAvatar}
+                                src={
+                                    user.profilePicture
+                                        ? PF + user.profilePicture
+                                        : PF + 'person/noAvatar.png'
+                                }
                                 alt="img"
                             />
                         </Link>
@@ -56,7 +59,7 @@ const Post = ({ post }) => {
                     <div className="postBottomLeft">
                         <img
                             className="likeIcon"
-                            src={love}
+                            src={PF + 'heart.png'}
                             alt=""
                             onClick={likeHandler}
                         />

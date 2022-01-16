@@ -1,75 +1,53 @@
-import p1 from '../src/assets/post/1.jpeg';
-import p2 from '../src/assets/post/2.jpeg';
-import p3 from '../src/assets/post/3.jpeg';
-import p4 from '../src/assets/post/4.jpeg';
-import p5 from '../src/assets/post/5.jpeg';
-import p6 from '../src/assets/post/6.jpeg';
-import p7 from '../src/assets/post/7.jpeg';
-import p8 from '../src/assets/post/8.jpeg';
-import p9 from '../src/assets/post/9.jpeg';
-import p10 from '../src/assets/post/10.jpeg';
-
-import u1 from '../src/assets/People/1.jpeg';
-import u2 from '../src/assets/People/2.jpeg';
-import u3 from '../src/assets/People/3.jpeg';
-import u4 from '../src/assets/People/4.jpeg';
-import u5 from '../src/assets/People/5.jpeg';
-import u6 from '../src/assets/People/6.jpeg';
-import u7 from '../src/assets/People/7.jpeg';
-import u8 from '../src/assets/People/8.jpeg';
-import u9 from '../src/assets/People/9.jpeg';
-import u10 from '../src/assets/People/10.jpeg';
-
 export const Users = [
     {
         id: 1,
-        profilePicture: u1,
-        username: 'Shanu Sharma',
+        profilePicture: 'person/1.jpeg',
+        username: 'Safak Kocaoglu',
     },
     {
         id: 2,
-        profilePicture: u2,
-        username: 'Ujjwal Sharma',
+        profilePicture: 'person/2.jpeg',
+        username: 'Janell Shrum',
     },
     {
         id: 3,
-        profilePicture: u3,
-        username: 'Jashanjot Singh',
+        profilePicture: 'person/3.jpeg',
+        username: 'Alex Durden',
     },
     {
         id: 4,
-        profilePicture: u4,
-        username: 'Harinder Singh',
+        profilePicture: 'person/4.jpeg',
+        username: 'Dora Hawks',
     },
     {
         id: 5,
-        profilePicture: u5,
-        username: 'Raghav Sharma',
+        profilePicture: 'person/5.jpeg',
+        username: 'Thomas Holden',
     },
     {
         id: 6,
-        profilePicture: u6,
-        username: 'Kartik Singhal',
+        profilePicture: 'person/6.jpeg',
+        username: 'Shirley Beauchamp',
     },
     {
         id: 7,
-        profilePicture: u7,
-        username: 'Isha Sahni',
+        profilePicture: 'person/7.jpeg',
+        username: 'Travis Bennett',
     },
     {
         id: 8,
-        profilePicture: u8,
-        username: 'Anchal kalra',
+        profilePicture: 'person/8.jpeg',
+        username: 'Kristen Thomas',
     },
     {
         id: 9,
-        profilePicture: u9,
-        username: 'Rajesh sharma',
+        profilePicture: 'person/9.jpeg',
+        username: 'Gary Duty',
     },
     {
         id: 10,
-        profilePicture: u10,
-        username: 'Kunal malhotra',
+        profilePicture: 'person/10.jpeg',
+        username: 'Safak Kocaoglu',
     },
 ];
 
@@ -77,7 +55,7 @@ export const Posts = [
     {
         id: 1,
         desc: 'Love For All, Hatred For None.',
-        photo: p1,
+        photo: 'post/1.jpeg',
         date: '5 mins ago',
         userId: 1,
         like: 32,
@@ -85,7 +63,7 @@ export const Posts = [
     },
     {
         id: 2,
-        photo: p2,
+        photo: 'post/2.jpeg',
         date: '15 mins ago',
         userId: 2,
         like: 2,
@@ -94,7 +72,7 @@ export const Posts = [
     {
         id: 3,
         desc: 'Every moment is a fresh beginning.',
-        photo: p3,
+        photo: 'post/3.jpeg',
         date: '1 hour ago',
         userId: 3,
         like: 61,
@@ -102,7 +80,7 @@ export const Posts = [
     },
     {
         id: 4,
-        photo: p4,
+        photo: 'post/4.jpeg',
         date: '4 hours ago',
         userId: 4,
         like: 7,
@@ -110,7 +88,7 @@ export const Posts = [
     },
     {
         id: 5,
-        photo: p5,
+        photo: 'post/5.jpeg',
         date: '5 hours ago',
         userId: 5,
         like: 23,
@@ -118,7 +96,7 @@ export const Posts = [
     },
     {
         id: 6,
-        photo: p6,
+        photo: 'post/6.jpeg',
         date: '1 day ago',
         userId: 6,
         like: 44,
@@ -127,7 +105,7 @@ export const Posts = [
     {
         id: 7,
         desc: 'Never regret anything that made you smile.',
-        photo: p7,
+        photo: 'post/7.jpeg',
         date: '2 days ago',
         userId: 7,
         like: 52,
@@ -135,7 +113,7 @@ export const Posts = [
     },
     {
         id: 8,
-        photo: p8,
+        photo: 'post/8.jpeg',
         date: '3 days ago',
         userId: 8,
         like: 15,
@@ -144,7 +122,7 @@ export const Posts = [
     {
         id: 9,
         desc: 'Change the world by being yourself.',
-        photo: p9,
+        photo: 'post/9.jpeg',
         date: '5 days ago',
         userId: 9,
         like: 11,
@@ -152,7 +130,7 @@ export const Posts = [
     },
     {
         id: 10,
-        photo: p10,
+        photo: 'post/10.jpeg',
         date: '1 week ago',
         userId: 10,
         like: 104,
