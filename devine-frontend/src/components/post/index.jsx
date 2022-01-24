@@ -11,7 +11,11 @@ const Post = ({ post }) => {
     const [like, setLike] = useState(post.likes.length);
     const [isLiked, setIsLiked] = useState(false);
     const [userr, setUser] = useState({});
+    const { user } = useContext(AuthContext);
 
+    useEffect(() => {
+        setIsLiked(post.likes.includes(user._id));
+    }, [user._id, post.likes]);
     useEffect(() => {
         const fetchUser = async () => {
             const res = await axios.get(
@@ -23,10 +27,14 @@ const Post = ({ post }) => {
     }, [post.userId]);
 
     const likeHandler = () => {
+        try {
+            axios.put('http://localhost:8800/api/posts/' + post._id + '/like', {
+                userId: user._id,
+            });
+        } catch (err) {}
         setLike(isLiked ? like - 1 : like + 1);
         setIsLiked(!isLiked);
     };
-    const { user } = useContext(AuthContext);
     const deleteHandle = async (e) => {
         e.preventDefault();
         const confirmBox = window.confirm('Are you sure you want to delete?');
