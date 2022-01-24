@@ -2,6 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { Search } from '@material-ui/icons';
 export const LoginHeader = () => {
+    const logout = () => {
+        localStorage.clear();
+        window.location = '/';
+    };
     return (
         <div className="navbarContainer">
             <div className="navbarLeft">
@@ -26,7 +30,13 @@ export const LoginHeader = () => {
                     <li className="navbarRightTimeline">Timeline</li>
                 </ul>
                 <ul className="navbarRightClick">
-                    <li className="navbarRightLogout">Logout</li>
+                    <li
+                        className="navbarRightLogout"
+                        onClick={logout}
+                        style={{ cursor: 'pointer' }}
+                    >
+                        Logout
+                    </li>
                 </ul>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import './index.css';
 import { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Register() {
@@ -76,7 +76,15 @@ export default function Register() {
                             Sign Up
                         </button>
                         <button className="RegisterButton">
-                            Log into Account
+                            <Link
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'white',
+                                }}
+                                to="/"
+                            >
+                                Already Registered? Login
+                            </Link>
                         </button>
                     </form>
                 </div>

@@ -18,6 +18,18 @@ const Share = () => {
             userId: user._id,
             desc: desc.current.value,
         };
+        if (file) {
+            const data = new FormData();
+            const filename = Date.now() + file.name;
+            data.append('name', filename);
+            data.append('file', file);
+            newPost.img = filename;
+            try {
+                await axios.post('http://localhost:8800/api/upload', data);
+            } catch (err) {
+                console.log(err);
+            }
+        }
         try {
             await axios.post('http://localhost:8800/api/posts', newPost);
             window.location.reload();

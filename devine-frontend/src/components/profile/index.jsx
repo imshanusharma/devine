@@ -7,13 +7,20 @@ import { Feed } from '../../components/feed';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
 
 export const Profile = () => {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-    const [user, setUser] = useState({});
+    const [user2, setUser] = useState({});
     const username = useParams().username;
+    const { user } = useContext(AuthContext);
 
     useEffect(() => {
+        if (user.username !== username) {
+            document.write('Page Not Found...Redirecting');
+            window.location = '/';
+        }
         const fetchUser = async () => {
             const res = await axios.get(
                 `http://localhost:8800/api/users?username=${username}`
@@ -21,7 +28,7 @@ export const Profile = () => {
             setUser(res.data);
         };
         fetchUser();
-    }, [username]);
+    }, [username, user.username]);
     return (
         <div>
             <LoginHeader />
@@ -32,8 +39,8 @@ export const Profile = () => {
                         <div className="profileCover">
                             <img
                                 src={
-                                    user.coverPicture
-                                        ? PF + user.coverPicture
+                                    user2.coverPicture
+                                        ? PF + user2.coverPicture
                                         : PF + 'person/noCover.png'
                                 }
                                 alt=""
@@ -41,8 +48,8 @@ export const Profile = () => {
                             />
                             <img
                                 src={
-                                    user.profilePicture
-                                        ? PF + user.profilePicture
+                                    user2.profilePicture
+                                        ? PF + user2.profilePicture
                                         : PF + 'person/noAvatar.png'
                                 }
                                 alt=""
@@ -50,13 +57,17 @@ export const Profile = () => {
                             />
                         </div>
                         <div className="profileInfo">
-                            <h4 className="profileInfoName">{user.username}</h4>
-                            <span className="profileInfoDesc">{user.desc}</span>
+                            <h4 className="profileInfoName">
+                                {user2.username}
+                            </h4>
+                            <span className="profileInfoDesc">
+                                {user2.desc}
+                            </span>
                         </div>
                     </div>
                     <div className="profileRightBottom">
                         <Feed username={username} />
-                        <RightBar user={user} />
+                        <RightBar user={user2} />
                     </div>
                 </div>
             </div>
