@@ -4,6 +4,7 @@ import { Users } from '../../dummyData';
 import { Online } from '../../components/online';
 export const RightBar = ({ user }) => {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
     const HomeRightbar = () => {
         return (
             <div>
@@ -36,57 +37,6 @@ export const RightBar = ({ user }) => {
                         <span className="rightbarInfoValue">
                             {user.profession}
                         </span>
-                    </div>
-                </div>
-                <h4 className="rightbarTitle">User Friends</h4>
-                <div className="rightbarFollowings">
-                    <div className="rightbarFollowing">
-                        <img
-                            src={PF + '/person/noAvatar.png'}
-                            alt=""
-                            className="rightbarFollowingImg"
-                        />
-                        <span className="rightbarFollowingName">Shanu</span>
-                    </div>
-                    <div className="rightbarFollowing">
-                        <img
-                            src={PF + '/person/noAvatar.png'}
-                            alt=""
-                            className="rightbarFollowingImg"
-                        />
-                        <span className="rightbarFollowingName">Shanu</span>
-                    </div>
-                    <div className="rightbarFollowing">
-                        <img
-                            src={PF + '/person/noAvatar.png'}
-                            alt=""
-                            className="rightbarFollowingImg"
-                        />
-                        <span className="rightbarFollowingName">Shanu</span>
-                    </div>
-                    <div className="rightbarFollowing">
-                        <img
-                            src={PF + '/person/noAvatar.png'}
-                            alt=""
-                            className="rightbarFollowingImg"
-                        />
-                        <span className="rightbarFollowingName">Shanu</span>
-                    </div>
-                    <div className="rightbarFollowing">
-                        <img
-                            src={PF + '/person/noAvatar.png'}
-                            alt=""
-                            className="rightbarFollowingImg"
-                        />
-                        <span className="rightbarFollowingName">Shanu</span>
-                    </div>
-                    <div className="rightbarFollowing">
-                        <img
-                            src={PF + '/person/noAvatar.png'}
-                            alt=""
-                            className="rightbarFollowingImg"
-                        />
-                        <span className="rightbarFollowingName">Shanu</span>
                     </div>
                 </div>
             </div>

@@ -15,20 +15,19 @@ export const Profile = () => {
     const [user2, setUser] = useState({});
     const username = useParams().username;
     const { user } = useContext(AuthContext);
-
-    useEffect(() => {
-        if (user.username !== username) {
-            document.write('Page Not Found...Redirecting');
-            window.location = '/';
-        }
-        const fetchUser = async () => {
-            const res = await axios.get(
-                `http://localhost:8800/api/users?username=${username}`
-            );
-            setUser(res.data);
-        };
-        fetchUser();
-    }, [username, user.username]);
+    try {
+        useEffect(() => {
+            const fetchUser = async () => {
+                const res = await axios.get(
+                    `http://localhost:8800/api/users?username=${username}`
+                );
+                setUser(res.data);
+            };
+            fetchUser();
+        }, [username, user.username]);
+    } catch (err) {
+        window.location = '/';
+    }
     return (
         <div>
             <LoginHeader />

@@ -30,12 +30,24 @@ const Share = () => {
                 console.log(err);
             }
         }
-        try {
-            await axios.post('http://localhost:8800/api/posts', newPost);
-            window.location.reload();
-        } catch (err) {
-            console.log(err);
-        }
+        fetch('http://localhost:8800/api/posts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newPost),
+        }).then((response) => {
+            if (response.ok) {
+                window.location.reload();
+            }
+            return response.json();
+        });
+        // try {
+        //     await axios.post('http://localhost:8800/api/posts', newPost);
+        //     window.location.reload();
+        // } catch (err) {
+        //     console.log(err);
+        // }
     };
     return (
         <div className="share">
