@@ -1,7 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import React, { useRef } from 'react';
+import { BrowserRouter as Router, Link, useNavigate } from 'react-router-dom';
 import { Search } from '@material-ui/icons';
+
 export const LoginHeader = () => {
+    const username = useRef();
+    const navigate = useNavigate();
+    const search = () => {
+        navigate(`/profile/${username.current.value}`);
+    };
     const logout = () => {
         localStorage.clear();
         window.location = '/';
@@ -14,13 +20,16 @@ export const LoginHeader = () => {
                 </Link>
             </div>
             <div className="navbarCenter">
-                <div className="searchbar">
-                    <Search className="searchIcon" />
-                    <input
-                        placeholder="Search for Developers, posts or events"
-                        className="searchInput"
-                    />
-                </div>
+                <form onSubmit={search}>
+                    <div className="searchbar">
+                        <Search className="searchIcon" />
+                        <input
+                            placeholder="Search for Developers, posts or events"
+                            className="searchInput"
+                            ref={username}
+                        />
+                    </div>
+                </form>
             </div>
             <div className="navbarRight">
                 <ul className="navbarRightClick">

@@ -99,7 +99,7 @@
     margin-top: 30px;
     margin-bottom: 10px;
     border: none;
-    background-color: #1872f2;
+    background-color: #4778ff;
     color: white;
     border-radius: 5px;
     padding: 5px 10px;
@@ -112,4 +112,5 @@
 
 .rightbarFollowButton:focus {
     outline: none;
+    background-color: #2b4796;
 }

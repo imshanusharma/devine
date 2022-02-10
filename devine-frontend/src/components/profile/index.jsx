@@ -57,7 +57,7 @@ export const Profile = () => {
                         </div>
                         <div className="profileInfo">
                             <h4 className="profileInfoName">
-                                {user2.username}
+                                {user2.username || 'USER NOT EXISTS'}
                             </h4>
                             <span className="profileInfoDesc">
                                 {user2.desc}
