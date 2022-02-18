@@ -8,6 +8,7 @@ export const loginCall = async (userCredential, dispatch) => {
         );
         dispatch({ type: 'LOGIN_SUCCESS', payload: res.data });
     } catch (err) {
+        window.alert('Wrong Password');
         dispatch({ type: 'LOGIN_FAILURE', payload: err });
     }
 };
