@@ -34,9 +34,11 @@ export default function Register() {
     return (
         <div className="register">
             <div className="registerWrapper">
-                <div className="registerLeft"></div>
+            <div className="loginLeft">
+                    <h3 className="loginLogo">Devine &lt;/&gt;</h3>
+                    <h2>Connect, Develop and Innovate with developers across the world.</h2>
+                </div>
                 <div className="registerRight">
-                    <h3 className="registerLogo">Devine</h3>
                     <form className="registerBox">
                         <input
                             placeholder="Username"

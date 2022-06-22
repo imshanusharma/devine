@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { Room, Announcement, AddAPhoto } from '@material-ui/icons';
+import { AddAPhoto, Cancel } from '@material-ui/icons';
 import { useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { useContext } from 'react';
@@ -68,6 +68,19 @@ const Share = () => {
                     />
                 </div>
                 <hr className="shareHr" />
+                {file && (
+                    <div className="shareImgContainer">
+                        <img
+                            src={URL.createObjectURL(file)}
+                            alt=""
+                            className="shareImg"
+                        />
+                        <Cancel
+                            className="shareCancelImg"
+                            onClick={() => setFile(null)}
+                        />
+                    </div>
+                )}
                 <form className="shareBottom" onSubmit={submitHandler}>
                     <div className="shareOptions">
                         <label htmlFor="file" className="shareOption">
@@ -86,21 +99,8 @@ const Share = () => {
                                 onChange={(e) => setFile(e.target.files[0])}
                             ></input>
                         </label>
-                        <div className="shareOption">
-                            <Room htmlColor="blue" className="shareIcon" />
-                            <span className="shareOptionText">
-                                Share Location
-                            </span>
-                        </div>
-                        <div className="shareOption">
-                            <Announcement
-                                htmlColor="goldenrod"
-                                className="shareIcon"
-                            />
-                            <span className="shareOptionText">
-                                Announcement
-                            </span>
-                        </div>
+                        
+                        
                     </div>
                     <button type="submit" className="shareButton">
                         Share

@@ -22,6 +22,7 @@ export default function Login() {
             <div className="loginWrapper">
                 <div className="loginLeft">
                     <h3 className="loginLogo">Devine &lt;/&gt;</h3>
+                    <h2>Connect, Develop and Innovate with developers across the world.</h2>
                 </div>
                 <div className="loginLeft">
                     <form className="loginBox" onSubmit={handleClick}>
@@ -51,7 +52,7 @@ export default function Login() {
                                 'Log In'
                             )}
                         </button>
-                        <span className="loginForgot">Forgot Password?</span>
+                    
 
                         <button className="loginRegisterButton">
                             {isFetching ? (

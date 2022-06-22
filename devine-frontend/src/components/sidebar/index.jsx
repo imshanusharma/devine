@@ -28,7 +28,7 @@ export const SideBar = () => {
                     </li>
                     <li className="sidebarListItem">
                         <VideoCall className="sidebarIcon" />
-                        <span className="sidebarListItemText">Videos</span>
+                        <a style={{"text-decoration" : "none", "color" : "black"}} rel='noreferrer' target='_blank' href='http://meet.google.com'><span className="sidebarListItemText">Organize Meet</span></a>
                     </li>
                     <li className="sidebarListItem">
                         <GroupAdd className="sidebarIcon" />
@@ -36,7 +36,7 @@ export const SideBar = () => {
                     </li>
                     <li className="sidebarListItem">
                         <Bookmark className="sidebarIcon" />
-                        <span className="sidebarListItemText">Bookmarks</span>
+                        <a style={{"text-decoration" : "none", "color" : "black"}} rel='noreferrer' target='_blank' href='http://github.com/imshanusharma'><span className="sidebarListItemText">GitHub</span></a>
                     </li>
                     <li className="sidebarListItem">
                         <QuestionAnswer className="sidebarIcon" />
@@ -44,7 +44,7 @@ export const SideBar = () => {
                     </li>
                     <li className="sidebarListItem">
                         <Work className="sidebarIcon" />
-                        <span className="sidebarListItemText">Jobs</span>
+                        <a style={{"text-decoration" : "none", "color" : "black"}} rel='noreferrer' target='_blank' href='http://linkedin.com'><span className="sidebarListItemText">Jobs LinkedIn</span></a>
                     </li>
                     <li className="sidebarListItem">
                         <Code className="sidebarIcon" />
@@ -54,7 +54,7 @@ export const SideBar = () => {
                     </li>
                     <li className="sidebarListItem">
                         <LibraryBooks className="sidebarIcon" />
-                        <span className="sidebarListItemText">Courses</span>
+                        <a style={{"text-decoration" : "none", "color" : "black"}} rel='noreferrer' target='_blank' href='http://www.coursera.com'><span className="sidebarListItemText">Courses</span></a>
                     </li>
                 </ul>
                 <br></br>
